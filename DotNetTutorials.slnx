@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Database_01/Database_01.csproj" />
+  <Project Path="One.WebApplication1/One.WebApplication1.csproj" />
+</Solution>
