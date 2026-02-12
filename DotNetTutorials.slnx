@@ -3,6 +3,7 @@
     <File Path=".gitignore" />
   </Folder>
   <Project Path="Ado.WebApplication1/Ado.WebApplication1.csproj" Id="aacdb99c-3be6-45f0-a9b4-254bccc20ba6" />
+  <Project Path="Dapper.WebApplication1/Dapper.WebApplication1.csproj" Id="cde74e40-59be-4214-a8e2-e8501789bba9" />
   <Project Path="Database_01/Database_01.csproj" />
   <Project Path="One.WebApplication1/One.WebApplication1.csproj" />
 </Solution>
