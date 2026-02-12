@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="Ado.WebApplication1/Ado.WebApplication1.csproj" Id="aacdb99c-3be6-45f0-a9b4-254bccc20ba6" />
   <Project Path="Database_01/Database_01.csproj" />
   <Project Path="One.WebApplication1/One.WebApplication1.csproj" />
 </Solution>
