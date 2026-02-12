@@ -10,6 +10,6 @@
 
         public string? AuthorName { get; set; } = null!;
 
-        public bool DeleteFlag { get; set; }
+        public bool DeleteFlag { get; set; } = false;
     }
 }
