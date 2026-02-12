@@ -168,5 +168,40 @@ namespace Ado.WebApplication1.Entities
 
             return res >= 1;
         }
+
+        public static bool Create(BlogDataModel blog)
+        {
+            connection.Open();
+
+            string query = @"insert into Tbl_blogs 
+                values 
+                    (@title,@Desc,@Author,0)";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@title", blog.Title);
+            cmd.Parameters.AddWithValue("@Desc", blog.Description);
+            cmd.Parameters.AddWithValue("@Author", blog.AuthorName);
+
+            var result = cmd.ExecuteNonQuery();
+
+            connection.Close();
+
+            return result >= 1;
+
+        }
+
+        public static bool Delete(int? id)
+        {
+            connection.Open();
+            string query = @"delete from Tbl_BLogs where Tbl_BLogs.BLogId = @BlogId";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogId",id);
+            int res = cmd.ExecuteNonQuery();
+
+            connection.Close();
+
+            return res >= 1;
+        }
     }
 }

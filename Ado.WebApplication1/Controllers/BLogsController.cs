@@ -39,5 +39,19 @@ namespace Ado.WebApplication1.Controllers
             bool res = BLogRepo.UpdateByPatch(id, blog);
             return res ? Ok("update success") : BadRequest(" update fail");
         }
+
+        [HttpPost]
+        public IActionResult CreateBlog([FromBody]BlogDataModel blog)
+        {
+            bool res = BLogRepo.Create(blog);
+            return res ? Created() : BadRequest("Create Fail");
+        }
+
+        [HttpDelete("{id:int}")]
+        public IActionResult DeleteBLog([FromRoute]int? id)
+        {
+            var res = BLogRepo.Delete(id);
+            return res ? NoContent() : BadRequest("delete blog fail");
+        }
     }
 }
