@@ -15,7 +15,7 @@ namespace One.ShareProject
             this._connection = connection;
         }
 
-        public DataTable? Query(string query,params List<SqlQueryParameter>? parameters)
+        public DataTable? Query(string query,params List<SqlQueryParameter>? parameters )
         {
             SqlConnection connection = new SqlConnection(this._connection);
             SqlCommand cmd = new SqlCommand(query, connection);

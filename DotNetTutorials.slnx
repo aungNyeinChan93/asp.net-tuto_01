@@ -8,4 +8,5 @@
   <Project Path="One.ConsoleApp1/One.ConsoleApp1.csproj" Id="92b0e4d2-92bc-49a4-9f71-e09fa09c1a98" />
   <Project Path="One.ShareProject/One.ShareProject.csproj" Id="45323f4c-860d-4e08-83ed-8d476631822c" />
   <Project Path="One.WebApplication1/One.WebApplication1.csproj" />
+  <Project Path="Two.WebApplication1/Two.WebApplication1.csproj" Id="d3b30539-3282-49b1-bb2b-04c27b2c8f66" />
 </Solution>
