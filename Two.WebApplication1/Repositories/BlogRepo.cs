@@ -30,5 +30,27 @@ namespace Two.WebApplication1.Repositories
             ).ToList();
             return blogList!;
         }
+
+        public BlogDataModel? GetOne(int? id)
+        {
+            var dt = _AdoService.Query("Select * from Tbl_BLogs where Tbl_Blogs.BlogId = @BlogId",
+                new SqlQueryParameter
+                {
+                    Name = "@BlogId",
+                    Value = id,
+                }
+                );
+            var blog = dt!.AsEnumerable().Select(r => new BlogDataModel
+            {
+                BLogId = r.Field<int>("BlogId"),
+                Title = r.Field<string>("Title"),   
+                AuthorName = r.Field<string>("AuthorName"),
+                Description = r.Field<string>("Description"),
+                DeleteFlag = r.Field<bool>("DeleteFlag")
+            }
+            ).FirstOrDefault();
+
+            return blog;
+        }
     }
 }
